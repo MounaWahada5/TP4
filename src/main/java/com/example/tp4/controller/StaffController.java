@@ -13,7 +13,7 @@ public class StaffController {
     @Autowired
     StaffService staffService;
     @GetMapping("/")
-    public String getAllSatffs(Model model) {
+    public String getAllStaffs(Model model) {
         List<Staff> staffList = staffService.getAll();
         if(staffList.size()>0) {
             model.addAttribute("staffs", staffList);
